@@ -1,23 +1,24 @@
-import React, { useState } from 'react'
-import './App.css';
-import mockUsers from './mockUsers';
-import mockApartments from './mockApartments';
-import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import AptIndex from './pages/AptIndex';
-import AptProtectedIndex from './pages/AptProtectedIndex';
-import AptShow from './pages/AptShow';
-import AptNew from './pages/AptNew';
-import AptEdit from './pages/AptEdit';
-import NotFound from './pages/NotFound';
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import AptIndex from "./pages/AptIndex";
+import AptShow from "./pages/AptShow";
+import AptNew from "./pages/AptNew";
+import AptEdit from "./pages/AptEdit";
+import AptProtectedIndex from "./pages/AptProtectedIndex";
+import NotFound from "./pages/NotFound";
+import { Routes, Route } from "react-router-dom";
+import mockUsers from "./mockUsers.js";
+import mockApartments from "./mockApartments.js";
+import "./App.css";
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(mockUsers[0])
-  const [apartment, setApartment] = useState(mockApartments)
+  const [user, setUser] = useState(null)
+  const [apartments, setApartments] = useState([])
+  
   return (
    <>
     <Header />
@@ -34,7 +35,7 @@ const App = () => {
       </Routes>
     <Footer />
    </>
-  );
+  )
 }
 
 export default App;

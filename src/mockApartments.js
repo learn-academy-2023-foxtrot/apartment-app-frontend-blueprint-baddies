@@ -39,3 +39,5 @@ let mockApartments = [
         user_id: 2
     }
 ]
+
+export default mockApartments

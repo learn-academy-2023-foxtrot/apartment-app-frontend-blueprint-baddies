@@ -2,7 +2,10 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    < div className='home-bimage' alt='image of cartoon background'> welcome to toon towers
+    </div >
+    </>
   )
 }
 

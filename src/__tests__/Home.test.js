@@ -3,8 +3,12 @@ import Home from '../pages/Home'
 
 describe ("<Home />", () => {
     it ("renders without crashing", () => {
-        render(<Home/>)
-        
+        render(
+        <BrowserRouter>
+          <Home/>
+        </BrowserRouter>
+      )
+
     const headingTitle = screen.getByText(/welcome to toon towers/i)
         expect(headingTitle).toBeInTheDocument()
     })

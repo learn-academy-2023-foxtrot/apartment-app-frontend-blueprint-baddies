@@ -2,7 +2,10 @@ import React from 'react'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <div className='notfound-image'><h1>
+      NotFound
+      </h1>
+      </div>
   )
 }
 
